@@ -1,0 +1,76 @@
+obj_vej 32 376
+obj_vej 288 376
+obj_vej 544 376
+obj_bold 64 48
+obj_mursten 8 88
+obj_mursten 72 96
+obj_mursten 72 80
+obj_mursten 8 72
+obj_roer 216 144
+obj_skraldespand 448 328
+obj_roer 496 176
+obj_mursten 256 192
+obj_mursten 320 200
+obj_mursten 360 184
+obj_mursten 448 88
+obj_mursten 384 80
+obj_mursten 320 88
+obj_tele_ind 440 40
+obj_tele_ud 552 40
+obj_mursten 648 288
+obj_maal 648 248
+obj_skaar 520 360
+obj_skaar 536 360
+obj_skaar 552 360
+obj_skaar 568 360
+obj_skaar 584 360
+obj_skaar 600 360
+obj_skaar 616 360
+obj_skaar 672 360
+obj_skaar 688 360
+obj_skaar 704 360
+obj_skaar 720 360
+obj_skaar 736 360
+obj_skaar 752 360
+obj_skaar 768 360
+obj_skaar 784 360
+obj_vej 800 376
+obj_vej 1056 376
+obj_mursten 544 104
+obj_mursten 608 96
+obj_mursten 672 96
+obj_mursten 736 88
+obj_mursten 800 80
+obj_mursten 848 96
+obj_mursten 864 80
+obj_mursten 912 96
+obj_mursten 632 112
+obj_kraft 920 71.29
+obj_skaar 800 360
+obj_skaar 816 360
+obj_skaar 832 360
+obj_skaar 848 360
+obj_skaar 864 360
+obj_skaar 880 360
+obj_skaar 896 360
+obj_skaar 912 360
+obj_skaar 928 360
+obj_skaar 944 360
+obj_skaar 960 360
+obj_skaar 976 360
+obj_skaar 992 360
+obj_skaar 1008 360
+obj_skaar 1024 360
+obj_skaar 1040 360
+obj_skaar 1056 360
+obj_skaar 1072 360
+obj_skaar 1088 360
+obj_skaar 1104 360
+obj_skaar 1120 360
+obj_skaar 1136 360
+ - variables - 
+width: 1145
+kraft: 200
+area: 2
+loft: 1
+banebesked_antal: 0

@@ -1,0 +1,25 @@
+master_grass 464 200
+obj_graes 96 392
+obj_graes 160 392
+obj_graes 224 392
+obj_graes 288 392
+obj_graes 352 392
+obj_graes 416 392
+obj_graes 480 392
+obj_graes 544 392
+obj_graes 608 392
+obj_graes 672 392
+obj_graes 736 392
+obj_graes 800 392
+obj_graes 864 392
+obj_graes 32 392
+obj_graes 928 392
+obj_graes 992 392
+obj_bold 64 368
+ - variables - 
+width: 1000
+loft: 1
+kraft: 0
+wallLeft: 1
+wallRight: 1
+tutorial: movement

@@ -1,0 +1,48 @@
+6 800 352
+1 96 192
+5 688 320
+5 928 320
+0 0 0
+8 384 80
+5 384 320
+9 368 240
+9 400 256
+9 400 224
+9 368 208
+9 400 192
+9 368 176
+9 400 160
+9 368 272
+9 368 144
+20 208 256
+21 560 224
+3 96 392
+3 160 392
+3 224 392
+3 288 392
+3 352 392
+3 416 392
+3 480 392
+3 544 392
+3 608 392
+3 672 392
+3 736 392
+3 800 392
+3 864 392
+3 32 392
+3 928 392
+3 992 392
+44 0 0
+ - variables - 
+width: 1000
+height: 400
+loft: 1
+goldPower: 24
+silverPower: 60
+goldTime: 2200
+silverTime: 3500
+banebesked_antal: 3
+banebesked0: In this level there's no direct way to the goal. - global.pause=1
+banebesked1: Luckily there's a teleport which can bring you to the other side of the thorns. - global.pause=0
+banebesked2: Go ahead and enter the teleport to get to the goal.
+

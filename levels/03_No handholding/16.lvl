@@ -1,0 +1,71 @@
+obj_lian 400 272
+obj_lian 704 192
+obj_pigge 400 32
+obj_pigge 432 16
+obj_pigge 528 16
+obj_pigge 544 56
+obj_pigge 544 96
+obj_pigge 544 136
+obj_pigge 544 184
+obj_pigge 544 232
+obj_pigge 544 288
+obj_pigge 416 368
+obj_pigge 672 368
+obj_pigge 672 328
+obj_pigge 672 288
+obj_pigge 640 192
+obj_pigge 656 240
+obj_pigge 624 136
+obj_pigge 768 128
+obj_pigge 784 176
+obj_pigge 784 224
+obj_pigge 896 24
+obj_pigge 896 72
+obj_pigge 880 112
+obj_pigge 880 160
+obj_pigge 880 200
+obj_pigge 880 232
+obj_pigge 896 264
+obj_pigge 896 296
+obj_pigge 896 336
+obj_pigge 880 368
+obj_pigge 752 288
+obj_pigge 704 312
+obj_pigge 768 248
+obj_bold 96 192
+obj_busk 304 320
+obj_kraft 704 69.89
+obj_graes 256 392
+obj_graes 320 392
+obj_graes 384 392
+obj_graes 448 392
+obj_graes 512 392
+obj_graes 576 392
+obj_graes 640 392
+obj_graes 704 392
+obj_graes 768 392
+obj_graes 832 392
+obj_graes 896 392
+obj_graes 960 392
+obj_graes 1024 392
+obj_graes 320 160
+obj_graes 384 160
+obj_graes 672 88
+obj_graes 736 88
+obj_maal 800 352
+obj_graes 192 392
+obj_graes 128 392
+obj_graes 64 392
+obj_graes 0 392
+ - variables - 
+width: 1000
+kraft: 180
+area: 1
+loft: 1
+background: Background1Dark
+#foreground: Foreground1Dark
+goldPower: 90
+silverPower: 135
+goldTime: 6000
+silverTime: 9000
+banebesked_antal: 0

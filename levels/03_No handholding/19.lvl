@@ -1,0 +1,58 @@
+obj_bold 96 192
+obj_graes 320 392
+obj_graes 384 392
+obj_graes 448 392
+obj_graes 512 392
+obj_graes 576 392
+obj_graes 640 392
+obj_graes 704 392
+obj_graes 768 392
+obj_graes 832 392
+obj_graes 896 392
+obj_graes 960 392
+obj_graes 1024 392
+obj_turn 320 384
+obj_turn 816 384
+obj_pindsvin 571 376
+obj_pindsvin 775 376
+obj_lian 560 320
+obj_graes 560 216
+obj_lian 336 216
+obj_lian 800 216
+obj_graes 336 112
+obj_graes 800 112
+obj_pigge 336 96
+obj_pigge 800 96
+obj_pigge 368 72
+obj_pigge 400 48
+obj_pigge 432 24
+obj_pigge 768 72
+obj_pigge 736 48
+obj_pigge 704 24
+obj_pindsvin_pendul 560 32
+obj_pindsvin_pendul 560 -48
+obj_graes 1376 392
+obj_graes 1440 392
+obj_graes 1504 392
+obj_pigge 1392 376
+obj_pigge 1392 344
+obj_pigge 1488 376
+obj_pigge 1488 344
+obj_maal 1440 352
+obj_pigge 1376 312
+obj_pigge 1504 312
+obj_graes 256 392
+obj_graes 192 392
+obj_graes 128 392
+obj_graes 64 392
+obj_graes 0 392
+ - variables - 
+width: 1500
+kraft: 160
+area: 1
+loft: 1
+goldPower: 60
+silverPower: 90
+goldTime: 5200
+silverTime: 9000
+banebesked_antal: 0

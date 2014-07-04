@@ -1,0 +1,81 @@
+obj_graes 32 384
+obj_graes 96 384
+obj_graes 160 384
+obj_graes 224 384
+obj_graes 288 384
+obj_graes 352 384
+obj_graes 416 384
+obj_graes 480 384
+obj_graes 544 384
+obj_graes 608 384
+obj_graes 672 384
+obj_graes 736 384
+obj_turn 256 384
+obj_turn 336 384
+obj_turn 416 384
+obj_turn 496 384
+obj_turn 576 384
+obj_turn 656 384
+obj_turn 736 384
+obj_turn 256 32
+obj_turn 336 32
+obj_turn 416 32
+obj_turn 496 32
+obj_turn 576 32
+obj_turn 656 32
+obj_turn 736 32
+obj_pindsvin_v 256 136
+obj_pindsvin_v 336 120
+obj_pindsvin_v 416 72
+obj_pindsvin_v 496 116
+obj_pindsvin_v 576 164
+obj_pindsvin_v 656 212
+obj_pindsvin_v 736 180
+obj_trampolin 720 368
+obj_trampolin 272 368
+obj_trampolin 496 368
+obj_graes 800 208
+obj_graes 864 208
+obj_busk 80 320
+obj_graes 1184 208
+obj_graes 1248 208
+obj_busk 1200 288
+obj_graes 1168 352
+obj_graes 1232 352
+obj_graes 1296 352
+obj_graes 1360 352
+obj_bold 80 256
+obj_maal 1312 320
+obj_graes 1312 208
+obj_graes 1376 208
+obj_graes 1440 208
+obj_graes 1504 208
+obj_graes 1568 208
+obj_turn 1152 192
+obj_turn 1600 192
+obj_pindsvin 1248 192
+obj_pindsvin 1456 192
+obj_lian 1728 96
+obj_lian 176 80
+obj_lian 784 64
+obj_pindsvin_pendul 1088 32
+obj_pindsvin_pendul 960 32
+obj_lian 880 320
+obj_kraft 1696 320.91
+obj_busk 1696 384
+obj_busk 1504 336
+obj_graes 960 32
+obj_graes 1024 32
+obj_graes 1088 32
+obj_kraft 832 187.81
+ - variables - 
+width: 1760
+kraft: 200
+area: 1
+loft: 1
+goldPower: 140
+silverPower: 180
+goldTime: 6500
+silverTime: 9000
+background: Background1Dark
+banebesked_antal: 0

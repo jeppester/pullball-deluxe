@@ -1,0 +1,56 @@
+obj_graes 32 392
+obj_graes 96 392
+obj_graes 160 392
+obj_graes 224 392
+obj_graes 288 392
+obj_graes 352 392
+obj_graes 416 392
+obj_graes 480 392
+obj_graes 544 392
+obj_graes 608 392
+obj_graes 672 392
+obj_graes 736 392
+obj_graes 800 392
+obj_busk 160 320
+obj_graes 864 392
+obj_graes 928 392
+obj_lian 352 96
+obj_lian 480 208
+obj_lian 560 208
+obj_graes 480 104
+obj_graes 544 104
+obj_pindsvin_pendul 352 168
+obj_busk 512 336
+obj_trampolin 344 376
+obj_graes_skraa_h 96 160
+obj_graes 32 160
+obj_graes 160 96
+obj_bold 32 144
+obj_maal 624 352
+obj_graes_skraa_v 608 168
+obj_graes_skraa_v 672 232
+obj_graes_skraa_v 736 296
+obj_graes 800 296
+obj_pigge 640 80
+obj_pigge 656 96
+obj_pigge 672 112
+obj_pigge 688 128
+obj_pigge 704 144
+obj_pigge 720 160
+obj_pigge 736 176
+obj_pigge 752 192
+obj_pigge 768 208
+obj_pigge 784 224
+obj_pigge 808 224
+obj_pigge 832 224
+obj_pigge 856 224
+obj_pindsvin_pendul 840 0
+obj_turn 936 376
+obj_turn 656 376
+obj_pindsvin 770 376
+ - variables - 
+width: 933
+kraft: 200
+area: 1
+loft: 1
+banebesked_antal: 0

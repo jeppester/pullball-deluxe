@@ -1,0 +1,26 @@
+16 336 376
+6 1936 344
+1 160 136
+3 32 384
+3 96 384
+3 160 384
+3 224 384
+3 288 384
+3 352 384
+3 1856 384
+3 1920 384
+3 1984 384
+3 1792 384
+0 0 0
+44 0 0
+ - variables - 
+width: 2000
+height: 400
+loft: 0
+kraft: 100
+goldPower: 45
+silverPower: 60
+goldTime: 2000
+silverTime: 3500
+background: Background1Dark
+banebesked_antal: 0

@@ -1,0 +1,55 @@
+obj_vej 128 376
+obj_vej 384 376
+obj_vej 640 376
+obj_vej 896 376
+obj_vej 1152 376
+obj_bold 1232 352
+obj_roer 1104 272
+obj_roer 192 272
+obj_maal 96 336
+obj_mursten 296 0
+obj_mursten 328 16
+obj_mursten 368 32
+obj_mursten 232 0
+obj_mursten 1056 0
+obj_mursten 992 0
+obj_mursten 264 16
+obj_mursten 1024 16
+obj_mursten 960 16
+obj_mursten 928 32
+obj_mursten 888 48
+obj_mursten 856 64
+obj_mursten 816 80
+obj_mursten 776 96
+obj_mursten 736 112
+obj_mursten 544 112
+obj_mursten 432 64
+obj_mursten 392 48
+obj_mursten 512 96
+obj_mursten 464 80
+obj_mursten 576 128
+obj_mursten 704 128
+obj_mursten 608 144
+obj_mursten 672 144
+obj_turn 208 368
+obj_turn 1088 368
+obj_bypindsvin 858 360
+obj_bypindsvin 430 360
+obj_bypindsvin 670 360
+obj_bypindsvin 796 360
+obj_bypindsvin 839 360
+obj_bypindsvin 372 360
+obj_bypindsvin 823 360
+obj_bypindsvin 454 360
+obj_bypindsvin 986 360
+obj_bypindsvin 614 360
+obj_bypindsvin 260 360
+obj_roer 640 144
+obj_mursten 192 88
+obj_mursten 1104 88
+ - variables - 
+width: 1276
+kraft: 200
+area: 2
+loft: 1
+banebesked_antal: 0

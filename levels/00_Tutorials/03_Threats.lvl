@@ -1,0 +1,52 @@
+master_grass 400 120
+obj_maal 800 352
+obj_pigge 352 368
+obj_pigge 384 336
+obj_pigge 416 320
+obj_pigge 448 320
+obj_pigge 480 336
+obj_pigge 512 368
+obj_pigge 352 128
+obj_pigge 384 96
+obj_pigge 416 80
+obj_pigge 448 80
+obj_pigge 480 96
+obj_pigge 512 128
+obj_pigge 320 160
+obj_pigge 544 160
+obj_pigge 432 48
+obj_pigge 432 16
+obj_pigge 576 160
+obj_pigge 288 160
+obj_graes 96 392
+obj_graes 160 392
+obj_graes 224 392
+obj_graes 288 392
+obj_graes 352 392
+obj_graes 416 392
+obj_graes 480 392
+obj_graes 544 392
+obj_graes 608 392
+obj_graes 672 392
+obj_graes 736 392
+obj_graes 800 392
+obj_graes 864 392
+obj_graes 32 392
+obj_graes 928 392
+obj_graes 992 392
+obj_busk 208 320
+obj_busk 640 320
+obj_bold 32 376
+ - variables - 
+width: 1000
+kraft: 200
+loft: 1
+kraft: 0
+wallLeft: 1
+wallRight: 1
+background: Background2Dark
+tutorial: spikes
+banebesked_antal: 3
+banebesked0: In this level there are a lot of spikes. - global.pause=1
+banebesked1: You will loose the level if the ball touches them. - global.pause=0
+banebesked2: Now get to the goal sign without touching the spikes.

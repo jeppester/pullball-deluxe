@@ -1,0 +1,87 @@
+obj_bold 96 192
+obj_graes 320 392
+obj_graes 384 392
+obj_graes 448 392
+obj_graes 512 392
+obj_graes 576 392
+obj_graes 640 392
+obj_graes 704 392
+obj_graes 768 392
+obj_graes 896 392
+obj_graes 960 392
+obj_graes 1024 392
+obj_graes 1152 392
+obj_graes 1216 392
+obj_graes 1280 392
+obj_graes 1344 392
+obj_graes 1408 392
+obj_graes 1472 392
+obj_graes 1536 392
+obj_graes 1600 392
+obj_graes 1664 392
+obj_graes 1728 392
+obj_trampolin 96 376
+obj_lian 304 320
+obj_graes 304 216
+obj_graes 240 216
+obj_turn 240 216
+obj_turn 304 216
+obj_turn 368 392
+obj_lian 464 88
+obj_lian 528 264
+obj_graes 496 160
+obj_graes 560 160
+obj_busk 768 320
+obj_graes 624 160
+obj_graes 688 160
+obj_turn 240 0
+obj_turn 304 0
+obj_turn 368 0
+obj_graes_skraa_v 752 224
+obj_graes_skraa_v 816 288
+obj_pindsvin_v 240 72
+obj_pindsvin_v 304 72
+obj_pindsvin_v 368 292
+obj_graes 880 288
+obj_tele_ind 624 248
+obj_tele_ud 528 64
+obj_graes 832 392
+obj_turn 864 376
+obj_turn 1568 376
+obj_lian 1056 112
+obj_pigge 1072 192
+obj_pigge 1104 208
+obj_pigge 1136 224
+obj_pigge 1168 232
+obj_pigge 1232 240
+obj_pigge 1264 240
+obj_pigge 1200 240
+obj_pigge 1296 240
+obj_pigge 1328 232
+obj_pigge 1360 224
+obj_pigge 1392 208
+obj_pigge 1424 192
+obj_lian 1456 112
+obj_busk 1664 320
+obj_maal 1664 232
+obj_graes 1088 392
+obj_turn 1104 376
+obj_turn 1328 376
+obj_pindsvin 1283 376
+obj_pindsvin 937 376
+obj_pindsvin 1449 376
+obj_graes 256 392
+obj_graes 192 392
+obj_graes 128 392
+obj_graes 64 392
+obj_graes 0 392
+ - variables - 
+width: 2000
+kraft: 180
+area: 1
+loft: 1
+goldPower: 75
+silverPower: 120
+goldTime: 7000
+silverTime: 11000
+banebesked_antal: 0

@@ -1,0 +1,27 @@
+obj_vej 128 376
+obj_vej 384 376
+obj_vej 640 376
+obj_vej 896 376
+obj_mursten 208 248
+obj_mursten 272 248
+obj_mursten 240 232
+obj_mursten 272 216
+obj_mursten 304 232
+obj_skraldespand 640 328
+obj_roer 112 176
+obj_turn 24 352
+obj_turn 592 352
+obj_bypindsvin 513 360
+obj_bold 264 192
+obj_maal 752 336
+obj_kraft 640 256.62
+obj_roer 696 312
+obj_mursten 696 120
+obj_roer 488 176
+obj_bypindsvin 61 360
+ - variables - 
+width: 800
+kraft: 200
+area: 2
+loft: 1
+banebesked_antal: 0

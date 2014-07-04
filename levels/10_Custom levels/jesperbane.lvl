@@ -1,0 +1,32 @@
+obj_graes 128 240
+obj_graes 104 336
+obj_graes 168 344
+obj_graes 232 344
+obj_graes 296 344
+obj_graes 360 344
+obj_graes 424 344
+obj_graes 680 104
+obj_graes 616 104
+obj_graes 552 112
+obj_graes 488 112
+obj_graes 424 120
+obj_graes 360 120
+obj_graes 296 120
+obj_graes_skraa_h 488 344
+obj_graes_skraa_h 552 280
+obj_graes 616 216
+obj_turn 448 320
+obj_turn 144 320
+obj_pindsvin 360 328
+obj_turn 448 32
+obj_pindsvin_v 448 170
+obj_pindsvin_pendul 656 112
+obj_bold 120 208
+obj_maal 608 304
+obj_graes 608 344
+ - variables - 
+width: 800
+kraft: 200
+area: 1
+loft: 1
+banebesked_antal: 0

@@ -1,0 +1,29 @@
+master_grass 472 232
+obj_maal 696 120
+obj_graes 96 392
+obj_graes 160 392
+obj_graes 224 392
+obj_graes 288 392
+obj_graes 352 392
+obj_graes 416 392
+obj_graes 480 392
+obj_graes 32 392
+obj_graes 544 160
+obj_graes 608 160
+obj_graes 672 160
+obj_graes 736 160
+obj_graes 800 160
+obj_bold 40 376
+ - variables - 
+width: 1000
+loft: 1
+kraft: 0
+wallLeft: 1
+wallRight: 1
+background: Background2Light
+tutorial: platforms
+banebesked_antal: 4
+banebesked0: Welcome to the second tutorial level. - global.pause=1
+banebesked1: In this level the goal sign is on a platform.
+banebesked2: If you fall of the platform and out of the level, you will lose - global.pause=1
+banebesked3: Now get to the goal sign to continue - global.pause=0

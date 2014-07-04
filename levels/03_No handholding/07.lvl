@@ -1,0 +1,62 @@
+0 0 8
+3 32 392
+1 96 192
+3 96 392
+16 96 376
+3 160 392
+3 208 128
+3 224 392
+9 224 256
+9 224 224
+9 224 192
+9 224 160
+9 240 272
+9 240 240
+9 240 208
+5 240 56
+9 240 176
+9 240 144
+5 240 320
+3 272 128
+3 288 392
+3 352 392
+16 384 376
+3 416 392
+3 480 392
+3 496 128
+9 512 256
+9 512 224
+9 512 192
+9 512 160
+5 528 320
+9 528 272
+9 528 240
+9 528 208
+9 528 176
+9 528 144
+5 528 56
+3 544 392
+3 560 128
+3 608 392
+3 672 392
+6 688 352
+3 736 392
+3 800 392
+3 864 392
+3 928 392
+3 992 392
+44 0 0
+ - variables - 
+width: 1000
+height: 400
+kraft: 100
+loft: 0
+goldPower: 60
+silverPower: 80
+goldTime: 4000
+silverTime: 6000
+background: Background2Light
+banebesked_antal: 2
+banebesked0: Some levels are not limited by roofs. This means that you'll be able to move the ball above the level.
+banebesked1: If there's a shadow in the top of the level, the level has a roof. Else, like here there's no roof.
+

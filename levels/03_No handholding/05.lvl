@@ -1,0 +1,45 @@
+3 32 392
+1 96 192
+3 96 392
+3 160 392
+3 416 392
+3 480 392
+3 544 392
+3 800 392
+3 864 392
+3 928 392
+0 0 0
+16 96 376
+16 480 376
+6 864 352
+9 288 224
+9 288 144
+9 288 184
+9 288 264
+9 288 304
+9 288 344
+9 288 384
+9 672 144
+9 672 184
+9 672 224
+9 672 264
+9 672 304
+9 672 344
+9 672 384
+9 480 24
+9 480 56
+9 480 88
+44 0 0
+ - variables - 
+width: 1000
+height: 400
+loft: 1
+goldPower: 75
+silverPower: 100
+goldTime: 3200
+silverTime: 5000
+banebesked_antal: 3
+background: Background1Dark
+banebesked0: In this level there are trampolins. - global.pause=1
+banebesked1: When bouncing on a trampolin, the vertical speed of the ball is increased. (untill a certain amount) - global.pause=1
+banebesked2: Try using the trampolins to get to the goal sign. - global.pause=0

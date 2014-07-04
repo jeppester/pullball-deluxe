@@ -1,0 +1,32 @@
+0 0 0
+3 96 392
+3 160 392
+3 224 392
+3 288 392
+3 352 392
+3 416 392
+3 480 392
+3 544 392
+3 32 392
+3 992 392
+3 624 144
+3 688 144
+3 752 144
+3 816 144
+5 160 320
+5 432 320
+1 48 368
+6 720 112
+44 0 0
+ - variables - 
+width: 1000
+height: 400
+loft: 1
+kraft: 0
+wallLeft: 1
+wallRight: 1
+background: Background1Dark
+banebesked_antal: 3
+banebesked0: In this level, there are bushes. - global.pause=1
+banebesked1: The ball bounces differently on different sorts of platforms. - global.pause=1
+banebesked2: Now get past the bushes to get to next level. - global.pause=0

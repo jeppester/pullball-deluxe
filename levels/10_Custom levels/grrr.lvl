@@ -1,0 +1,42 @@
+obj_busk 440 328
+obj_graes_skraa_v 472 304
+obj_graes_skraa_h 408 304
+obj_graes 344 304
+obj_graes 536 304
+obj_graes_skraa_h 600 304
+obj_graes_skraa_v 664 304
+obj_graes 728 304
+obj_graes_skraa_v 280 304
+obj_graes_skraa_h 216 304
+obj_graes 152 304
+obj_graes_skraa_v 88 304
+obj_graes_skraa_h 24 304
+obj_busk 56 328
+obj_busk 248 328
+obj_busk 632 328
+obj_lian 248 96
+obj_lian 56 96
+obj_lian 440 96
+obj_lian 632 96
+obj_maal 728 360
+obj_trampolin 152 288
+obj_trampolin 344 288
+obj_trampolin 536 288
+obj_bold 152 32
+obj_rev_gravity 152 64
+obj_rev_gravity 248 208
+obj_rev_gravity 440 208
+obj_rev_gravity 632 208
+obj_turn 720 24
+obj_pindsvin_v 720 126
+obj_turn 720 312
+obj_kraft 152 210.49
+obj_kraft 536 210.47
+obj_kraft 344 26.28
+obj_kraft 720 24.32
+ - variables - 
+width: 800
+kraft: 200
+area: 1
+loft: 1
+banebesked_antal: 0
