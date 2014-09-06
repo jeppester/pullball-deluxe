@@ -32,8 +32,8 @@ new Class('LevelEditor', [View.Container], {
 
 		// Init top menu
 		this.initTopMenu();
-		
-		// Initialize level 
+
+		// Initialize level
 		this.initLevel();
 
 		// Setup controls
@@ -328,7 +328,7 @@ new Class('LevelEditor', [View.Container], {
 		if (this.scrolling) {
 			return;
 		}
-				
+
 		var typeNames, typeName, i;
 
 		typeNames = Object.keys(objectTypes);
@@ -527,7 +527,7 @@ new Class('LevelEditor', [View.Container], {
 		// Make sure that all grass objects are "updated"
 		for (i = 0; i < this.placedObjects.length; i++) {
 			object = this.placedObjects[i];
-			
+
 			if (/(Grass|GrassUpHill|GrassDownHill)$/.test(object.source)) {
 				object.createBorders();
 			}
@@ -581,8 +581,8 @@ new Class('LevelEditor', [View.Container], {
 
 		this.level = level;
 
-		level.objects.forEach(function () {
-			main.levelEditor.placeObject(this, this.vars.x, this.vars.y);
+		level.objects.forEach(function (o) {
+			main.levelEditor.placeObject(o, o.vars.x, o.vars.y);
 		});
 
 		this.btnPowerSelector.power = this.level.power ? this.level.power : 0;
@@ -701,13 +701,13 @@ new Class('LevelEditor', [View.Container], {
 	},
 
 	onSettingsChanged: function () {
-		// Set walls 
+		// Set walls
 		main.levelController.wallLeft.animate({opacity: this.level.wallLeft * 1}, {duration: 200});
 		main.levelController.wallRight.animate({opacity: this.level.wallRight * 1}, {duration: 200});
-		
+
 		// Set ceiling
 		main.levelController.ceiling.animate({opacity: this.level.ceiling * 1}, {duration: 200});
-		
+
 		// Set level width (remember to move the view if necessary)
 		if (this.level.width !== main.levelController.currentLevel.width) {
 			main.levelController.wallRight.animate({x: this.level.width}, {duration: 200});
@@ -750,17 +750,17 @@ new Class('LevelEditor', [View.Container], {
 
 		camX = engine.cameras[0].captureRegion.x;
 
-		this.gridY.forEach(function () {
-			this.a.x = camX;
-			this.b.x = camX + 800;
+		this.gridY.forEach(function (l) {
+			l.a.x = camX;
+			l.b.x = camX + 800;
 		});
 
-		this.gridX.forEach(function () {
-			if (this.x - camX > 800) {
-				this.x -= 800;
+		this.gridX.forEach(function (l) {
+			if (l.x - camX > 800) {
+				l.x -= 800;
 			}
-			else if (this.x - camX < 0) {
-				this.x += 800;
+			else if (l.x - camX < 0) {
+				l.x += 800;
 			}
 		});
 	},

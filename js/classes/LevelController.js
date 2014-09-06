@@ -51,7 +51,7 @@ new Class('LevelController', {
 					}
 				});
 			});
-			
+
 			// Show level completed screen
 			overlayView.children[1].addChildren(this.completionScreen);
 			this.completionScreen.checkSaveStats();
@@ -86,15 +86,15 @@ new Class('LevelController', {
 		var objects;
 
 		//objectsView.children[1].setDrawCache(false);
-		
+
 		// Find all level objects
 		objects = [].concat(main.depths[0].children, main.depths[1].children, main.depths[2].children, main.depths[3].children, main.depths[4].children, tutorialView.children);
 
 		engine.currentRoom.loops.onRunning.unscheduleAll();
 
 		main.fadeOver.animate({opacity: 1}, {duration: 500, callback: function () {
-			objects.forEach(function() {
-				engine.purge(this);
+			objects.forEach(function(o) {
+				engine.purge(o);
 			});
 		}});
 
@@ -237,7 +237,7 @@ new Class('LevelController', {
 			main.restartButton.onClick = function () {
 				main.levelController.resetLevel();
 			};
-			
+
 			main.storage.selectedFolder = this.currentLevelEntry.fId;
 			main.storage.selectedLevel = this.currentLevelEntry.lId;
 			main.saveLocalStorage();
@@ -338,9 +338,9 @@ new Class('LevelController', {
 
 		engine.currentRoom.loops.onRunning.schedule(this, function () {
 			this.ball.spawn(function () {
-				main.levelController.deadlies.forEach(function () {
-					if (this.onLevelStart) {
-						this.onLevelStart();
+				main.levelController.deadlies.forEach(function (d) {
+					if (d.onLevelStart) {
+						d.onLevelStart();
 					}
 				});
 
@@ -354,5 +354,5 @@ new Class('LevelController', {
 				}
 			});
 		}, 1000 + time);
-	},	
+	},
 });

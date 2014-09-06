@@ -152,17 +152,17 @@ new Class('LevelCompletionScreen', [View.Container], {
 
 		this.addChildren.apply(this, this.buttons);
 
-		this.buttons.forEach(function () {
-			this.disable();
-			this.widthScale = 0.5;
-			this.opacity = 0; 
+		this.buttons.forEach(function (b) {
+			b.disable();
+			b.widthScale = 0.5;
+			b.opacity = 0;
 		});
 	},
 
 	enableButtons: function () {
-		this.buttons.forEach(function () {
-			this.enable();
-			this.animate({opacity: 1, widthScale: 1},{duration: 500});
+		this.buttons.forEach(function (b) {
+			b.enable();
+			b.animate({opacity: 1, widthScale: 1},{duration: 500});
 		});
 	},
 
@@ -293,8 +293,8 @@ new Class('LevelCompletionScreen', [View.Container], {
 			this.completionAward.animate({size: 1}, {duration: 500});
 			this.insertBelow(this.completionAward, oldStar);
 
-			[oldStar, this.powerAward, this.timeAward].forEach(function () {
-				this.animate({size: 1.3, opacity: 0}, {duration: 500, easing: 'quadOut', callback: function () {
+			[oldStar, this.powerAward, this.timeAward].forEach(function (a) {
+				a.animate({size: 1.3, opacity: 0}, {duration: 500, easing: 'quadOut', callback: function () {
 					engine.purge(this);
 				}});
 			});
@@ -306,12 +306,12 @@ new Class('LevelCompletionScreen', [View.Container], {
 	},
 
 	remove: function () {
-		this.children.forEach(function () {
-			if (this.disable) {
-				this.disable();
+		this.children.forEach(function (c) {
+			if (c.disable) {
+				c.disable();
 			}
 
-			this.animate({opacity: 0},{duration: 400});
+			c.animate({opacity: 0},{duration: 400});
 		});
 
 		/*main.backButton.enable();

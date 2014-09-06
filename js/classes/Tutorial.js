@@ -20,9 +20,9 @@ new Class('Tutorial', [View.Sprite], {
 			}, vars: {x: 0, y: 130}})
 		);
 
-		this.children.concat(this).forEach(function () {
-			this.opacity = 0;
-			this.animate({opacity: 1},{duration: 400});
+		this.children.concat(this).forEach(function (c) {
+			c.opacity = 0;
+			c.animate({opacity: 1},{duration: 400});
 		});
 
 		this.progress = 0;
@@ -46,12 +46,12 @@ new Class('Tutorial', [View.Sprite], {
 	},
 
 	remove: function () {
-		this.children.concat(this).forEach(function () {
-			if (this.disable) {
-				this.disable();
+		this.children.concat(this).forEach(function (c) {
+			if (c.disable) {
+				c.disable();
 			}
 
-			this.animate({opacity: 0},{duration: 400});
+			c.animate({opacity: 0},{duration: 400});
 		});
 
 		this.schedule(function () {

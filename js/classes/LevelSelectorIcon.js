@@ -31,7 +31,7 @@ new Class('LevelSelectorIcon', [View.Container], {
 				}
 			}
 		}
-		
+
 		this.levelsCount = folder.levels.length;
 
 		if (this.entry.fileName) {
@@ -111,7 +111,7 @@ new Class('LevelSelectorIcon', [View.Container], {
 
 		awards = [];
 		if (this.stats) {
-			
+
 			if (this.stats.fullyCompleted) {
 				awards.push(new View.Sprite('Menu.StarGold', 0, 0, 0, {size: 0}));
 			}
@@ -133,9 +133,9 @@ new Class('LevelSelectorIcon', [View.Container], {
 
 			if (awards.length) {
 				this.addChildren.apply(this, awards);
-				
-				awards.forEach(function () {
-					this.animate({size: 1}, {duration: 300});
+
+				awards.forEach(function (a) {
+					a.animate({size: 1}, {duration: 300});
 				});
 			}
 		}});
@@ -144,8 +144,8 @@ new Class('LevelSelectorIcon', [View.Container], {
 	},
 
 	remove: function () {
-		this.children.forEach(function () {
-			this.animate({opacity: 0}, {duration: 400});
+		this.children.forEach(function (c) {
+			c.animate({opacity: 0}, {duration: 400});
 		});
 
 		this.animate({size: 1.1}, {duration: 400, callback: function () {
