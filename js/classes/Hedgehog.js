@@ -1,43 +1,45 @@
-new Class('Hedgehog', [Obstacle], {
-	Hedgehog: function (type) {
-		this.Obstacle(type);
-		this.animationSpeed = 0;
+Hedgehog = function (type) {
+	Obstacle.call(this, type);
+	this.animationSpeed = 0;
 
-		// If climbing hedgehog, create rope
-		if (this.source ==='Objects.HedgehogHanging' && this.offset.y === 34) {
-			this.rope = new View.Line(new Math.Vector(this.x, 0), new Math.Vector(this.x, this.y), "#8e4b2a", 1.5); //new Sprite('Objects.HedgehogRope', this.x, 0, 0, {offset: new Vector(4, 0)});
-			objectsView.children[type.depth].addChildren(this.rope);
-			
-			//this.rope.targetOpacity = 0.6;
-			//this.rope.opacity = 0;
+	// If climbing hedgehog, create rope
+	if (this.source ==='Objects.HedgehogHanging' && this.offset.y === 34) {
+		this.rope = new View.Line(new Math.Vector(this.x, 0), new Math.Vector(this.x, this.y), "#8e4b2a", 1.5); //new Sprite('Objects.HedgehogRope', this.x, 0, 0, {offset: new Vector(4, 0)});
+		objectsView.children[type.depth].addChildren(this.rope);
 
-			this.adjustRopeLength();
-		}
-		// If swinging hedgehog, create different rope
-		else if (this.source ==='Objects.HedgehogHanging' && this.offset.y === -105) {
-			this.rope = new View.Line(new Math.Vector(this.x, this.y), new Math.Vector(this.x, this.y), "#8e4b2a", 1.5); //Sprite('Objects.HedgehogRope', this.x, this.y, 0, {offset: new Vector(2, 0)});
+		//this.rope.targetOpacity = 0.6;
+		//this.rope.opacity = 0;
 
-			this.pole = new View.Sprite('Objects.HedgehogRopePole', this.x, this.y);
+		this.adjustRopeLength();
+	}
+	// If swinging hedgehog, create different rope
+	else if (this.source ==='Objects.HedgehogHanging' && this.offset.y === -105) {
+		this.rope = new View.Line(new Math.Vector(this.x, this.y), new Math.Vector(this.x, this.y), "#8e4b2a", 1.5); //Sprite('Objects.HedgehogRope', this.x, this.y, 0, {offset: new Vector(2, 0)});
 
-			objectsView.children[type.depth].addChildren(this.rope, this.pole);
-			this.swingTime = 2000;
-			this.swingWidth = Math.PI / 4;
+		this.pole = new View.Sprite('Objects.HedgehogRopePole', this.x, this.y);
 
-			// set hedgehog and rope to initial position
-			this.targetDir = -this.swingWidth;
-			this.rope.b = this.rope.a.copy().add(new Math.Vector(0, 115).rotate(this.targetDir));
-			this.direction = -this.swingWidth;
-			
-			//this.rope.targetOpacity = 0.6;
-			//this.rope.opacity = 0;
-			/*this.pole.importProperties({
-				direction: -Math.PI,
-				opacity: 0,
-				widthScale: 0
-			});*/
-		}
-	},
+		objectsView.children[type.depth].addChildren(this.rope, this.pole);
+		this.swingTime = 2000;
+		this.swingWidth = Math.PI / 4;
 
+		// set hedgehog and rope to initial position
+		this.targetDir = -this.swingWidth;
+		this.rope.b = this.rope.a.copy().add(new Math.Vector(0, 115).rotate(this.targetDir));
+		this.direction = -this.swingWidth;
+
+		//this.rope.targetOpacity = 0.6;
+		//this.rope.opacity = 0;
+		/*this.pole.importProperties({
+			direction: -Math.PI,
+			opacity: 0,
+			widthScale: 0
+		});*/
+	}
+};
+
+Hedgehog.prototype = Object.create(Obstacle.prototype);
+
+Hedgehog.prototype.import({
 	onLevelStart: function () {
 		var i;
 
@@ -62,7 +64,7 @@ new Class('Hedgehog', [Obstacle], {
 
 	doMovement: function () {
 		var controller;
-		
+
 		this.x += engine.convertSpeed(this.speed.x);
 		this.y += engine.convertSpeed(this.speed.y);
 	},

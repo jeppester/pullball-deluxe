@@ -1,48 +1,50 @@
-new Class('LevelEditor', [View.Container], {
-	LevelEditor: function (type) {
-		var obj;
+LevelEditor = function (type) {
+	var obj;
 
-		main.levelEditor = this;
+	main.levelEditor = this;
 
-		this.Container();
-		this.targetPos = 0;
-		this.moving = false;
-		this.scrolling = false;
-		this.ball = false;
-		this.selectedObject = false;
-		this.selectedObjectStartTime = false;
+	View.Container.call(this);
+	this.targetPos = 0;
+	this.moving = false;
+	this.scrolling = false;
+	this.ball = false;
+	this.selectedObject = false;
+	this.selectedObjectStartTime = false;
 
-		this.currentPortal = 1;
-		this.portals = [false, false];
+	this.currentPortal = 1;
+	this.portals = [false, false];
 
-		// Placed objects array
-		this.placedObjects = [];
-		this.placeMode = true;
+	// Placed objects array
+	this.placedObjects = [];
+	this.placeMode = true;
 
-		// Create grid
-		this.initGrid();
+	// Create grid
+	this.initGrid();
 
-		// Create cursor object (a preview of the selected object)
-		this.currentObjectType = objectTypes.Grass
-		this.cursor = new View.Sprite(this.currentObjectType.bitmap, 0, 0, 0, {offset: new Math.Vector(this.currentObjectType.offsetX, this.currentObjectType.offsetY), opacity: 0.6});
-		overlayView.children[0].addChildren(this.cursor);
+	// Create cursor object (a preview of the selected object)
+	this.currentObjectType = objectTypes.Grass;
+	this.cursor = new View.Sprite(this.currentObjectType.bitmap, 0, 0, 0, {offset: new Math.Vector(this.currentObjectType.offsetX, this.currentObjectType.offsetY), opacity: 0.6});
+	overlayView.children[0].addChildren(this.cursor);
 
-		// Create "numb" area where objects cannot be placed (for menu)
-		this.numbArea = new Math.Rectangle(0, 0, 585, 42);
+	// Create "numb" area where objects cannot be placed (for menu)
+	this.numbArea = new Math.Rectangle(0, 0, 585, 42);
 
-		// Init top menu
-		this.initTopMenu();
+	// Init top menu
+	this.initTopMenu();
 
-		// Initialize level
-		this.initLevel();
+	// Initialize level
+	this.initLevel();
 
-		// Setup controls
-		engine.currentRoom.loops.eachFrame.attachFunction(this, this.doControls);
-		document.addEventListener('mousewheel', this.doObjectSelection);
+	// Setup controls
+	engine.currentRoom.loops.eachFrame.attachFunction(this, this.doControls);
+	document.addEventListener('mousewheel', this.doObjectSelection);
 
-		main.paused = true;
-	},
+	main.paused = true;
+};
 
+LevelEditor.prototype = Object.create(View.Container.prototype);
+
+LevelEditor.prototype.import({
 	// INIT STUFF
 	initLevel: function () {
 		if (localStorage && localStorage.pullballEditorLevel) {
@@ -576,7 +578,7 @@ new Class('LevelEditor', [View.Container], {
 		this.clearLevel();
 
 		if (typeof level === 'string') {
-			level = LevelParser.prototype.parseLevel(level);
+			level = LevelParser.parseLevel(level);
 		}
 
 		this.level = level;
@@ -632,7 +634,7 @@ new Class('LevelEditor', [View.Container], {
 	},
 
 	loadLevelFromStorage: function () {
-		this.openLevel(LevelParser.prototype.parseJs(localStorage.pullballEditorLevel));
+		this.openLevel(LevelParser.parseJs(localStorage.pullballEditorLevel));
 	},
 
 	saveLevelToStorage: function () {

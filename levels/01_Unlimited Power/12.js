@@ -350,7 +350,7 @@
 			"offsetLvlY": 8,
 			"group": "controllers",
 			"canControl": function (object) {
-			return object.implements(Hedgehog);
+			return object instanceof Hedgehog
 		},
 			"doControl": function (object) {
 			// Only turn if necessary
@@ -397,7 +397,7 @@
 			"offsetLvlY": 8,
 			"group": "controllers",
 			"canControl": function (object) {
-			return object.implements(Hedgehog);
+			return object instanceof Hedgehog
 		},
 			"doControl": function (object) {
 			// Only turn if necessary

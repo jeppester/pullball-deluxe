@@ -1,19 +1,20 @@
-new Class('Ball', [View.Collidable], {
-	Ball: function (type) {
-		this.Collidable('Objects.BallBang', type.vars.x, type.vars.y);
-		this.animationSpeed = 0;
-		this.speed = new Math.Vector(0, 0);
-		this.size = 0;
-		this.power = 200;
-		this.powerMax = 200;
-		this.powerDrain = 60;
-		this.deathTimerStarted = false;
-		this.instructions = type;
-		this.dead = false;
+Ball = function (type) {
+	View.Collidable.call(this, 'Objects.BallBang', type.vars.x, type.vars.y);
+	this.animationSpeed = 0;
+	this.speed = new Math.Vector(0, 0);
+	this.size = 0;
+	this.power = 200;
+	this.powerMax = 200;
+	this.powerDrain = 60;
+	this.deathTimerStarted = false;
+	this.instructions = type;
+	this.dead = false;
+	this.collisionResolution = 4;
+};
 
-		this.collisionResolution = 4;
-	},
+Ball.prototype = Object.create(View.Collidable.prototype);
 
+Ball.prototype.import({
 	spawn: function (callback) {
 		this.opacity = 1;
 		this.size = 0;
@@ -42,7 +43,7 @@ new Class('Ball', [View.Collidable], {
 
 		// Create fading numbers
 		this.deathTimerText = new View.TextBlock('3', 400, 200, 100, {offset: new Math.Vector(50, 70), font: 'normal 100px sans-serif', color: '#F33', alignment: 'center', opacity: 0});
-		this.deathTimerText.animate({opacity: 1},{duration: 200})
+		this.deathTimerText.animate({opacity: 1},{duration: 200});
 
 		engine.currentRoom.loops.onRunning.schedule(this, function () {
 			if (this.deathTimerStarted) {
@@ -145,7 +146,7 @@ new Class('Ball', [View.Collidable], {
 			// Fade in the indicator
 			main.indicator.x = p[0].x - main.indicator.parent.x;
 			main.indicator.y = p[0].y - main.indicator.parent.y;
-			main.indicator.radius = Math.max(40, main.indicator.radius - engine.convertSpeed(100)); 
+			main.indicator.radius = Math.max(40, main.indicator.radius - engine.convertSpeed(100));
 			main.indicator.opacity = Math.min(0.8, main.indicator.opacity + engine.convertSpeed(4));
 		}
 		else if (main.indicator && !main.indicator.inactive) {
@@ -250,5 +251,5 @@ new Class('Ball', [View.Collidable], {
 
 		// Move parallax backgrounds and wall
 		main.updateParallax();
-	},	
+	},
 });

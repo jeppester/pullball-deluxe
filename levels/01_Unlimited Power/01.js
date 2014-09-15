@@ -610,7 +610,7 @@
 			"group": "controllers",
 			"depth": 1,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			var peakTime, maxSpeed;
@@ -646,7 +646,7 @@
 			"group": "controllers",
 			"depth": 1,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			var peakTime, maxSpeed;
@@ -682,7 +682,7 @@
 			"group": "controllers",
 			"depth": 1,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			var peakTime, maxSpeed;
@@ -946,7 +946,7 @@
 			"group": "controllers",
 			"depth": 1,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			var peakTime, maxSpeed;
@@ -982,7 +982,7 @@
 			"group": "controllers",
 			"depth": 1,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			var peakTime, maxSpeed;

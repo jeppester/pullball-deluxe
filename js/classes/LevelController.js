@@ -1,36 +1,36 @@
-new Class('LevelController', {
-	LevelController: function () {
-		this.levelQueue = [];
-		this.levelLoaded = false;
-		this.tries = 0;
-		this.startTime = 0;
-		this.powerSpend = 0;
+LevelController = function () {
+	this.levelQueue = [];
+	this.levelLoaded = false;
+	this.tries = 0;
+	this.startTime = 0;
+	this.powerSpend = 0;
 
-		engine.ajaxRequest('getLevels.php', '', false, function (data) {
-			this.levelList = JSON.parse(data);
-		}, this);
+	engine.ajaxRequest('getLevels.php', '', false, function (data) {
+		this.levelList = JSON.parse(data);
+	}, this);
 
-		// create ceiling and walls
-		this.ceiling = new View.Sprite('UI.Ceiling', 0, 0, 0, {offset: new Math.Vector(0,0), opacity: 0});
-		this.ceiling.width = 800;
+	// create ceiling and walls
+	this.ceiling = new View.Sprite('UI.Ceiling', 0, 0, 0, {offset: new Math.Vector(0,0), opacity: 0});
+	this.ceiling.width = 800;
 
-		this.wallLeft = new View.Sprite('UI.Ceiling', 0, 400, -Math.PI / 2, {offset: new Math.Vector(), opacity: 0});
-		this.wallLeft.width = 400;
+	this.wallLeft = new View.Sprite('UI.Ceiling', 0, 400, -Math.PI / 2, {offset: new Math.Vector(), opacity: 0});
+	this.wallLeft.width = 400;
 
-		this.wallRight = new View.Sprite('UI.Ceiling', 800, 0, Math.PI / 2, {offset: new Math.Vector(), opacity: 0});
-		this.wallRight.width = 400;
+	this.wallRight = new View.Sprite('UI.Ceiling', 800, 0, Math.PI / 2, {offset: new Math.Vector(), opacity: 0});
+	this.wallRight.width = 400;
 
-		overlayView.children[1].insertBelow(this.ceiling, main.fadeOver);
-		overlayView.children[0].addChildren(this.wallLeft, this.wallRight);
+	overlayView.children[1].insertBelow(this.ceiling, main.fadeOver);
+	overlayView.children[0].addChildren(this.wallLeft, this.wallRight);
 
-		// Create parallax background
-		this.bg = new View.Sprite('Background1Light', 0, 0, 0, {offset: new Math.Vector(0,0)});
-		this.mg = new View.Container();
-		this.fg = new View.Sprite('Foreground1Light', 0, 0, 0, {offset: new Math.Vector(0,0), opacity: 0.7});
+	// Create parallax background
+	this.bg = new View.Sprite('Background1Light', 0, 0, 0, {offset: new Math.Vector(0,0)});
+	this.mg = new View.Container();
+	this.fg = new View.Sprite('Foreground1Light', 0, 0, 0, {offset: new Math.Vector(0,0), opacity: 0.7});
 
-		bgView.addChildren(this.bg, this.mg, this.fg);
-	},
+	bgView.addChildren(this.bg, this.mg, this.fg);
+};
 
+LevelController.prototype.import({
 	onLevelComplete: function () {
 		if (!this.currentLevel.isTesting) {
 			this.completionScreen = new LevelCompletionScreen(function () {
@@ -123,7 +123,7 @@ new Class('LevelController', {
 
 	openLevel: function (level, levelEntry, onLevelOpened) {
 		if (typeof level === 'string') {
-			level = LevelParser.prototype.parseLevel(level);
+			level = LevelParser.parseLevel(level);
 		}
 
 		// If a level is loaded, close it

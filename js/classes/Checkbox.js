@@ -1,20 +1,22 @@
-new Class('Checkbox', [View.Container], {
-	Checkbox: function (boxSource, checkerSource, x, y, onClick, checked, hideBoxWhenChecked) {
-		this.Container();
+Checkbox = function (boxSource, checkerSource, x, y, onClick, checked, hideBoxWhenChecked) {
+	View.Container.call(this);
 
-		this.box = new Sprite(boxSource, x, y);
-		this.checker = new Sprite(checkerSource, x, y, 0, {opacity: 0});
-		this.onClick = onClick !== undefined ? onClick : function () {};
-		this.addChildren(this.box, this.checker);
-		this.hideBoxWhenChecked = hideBoxWhenChecked
+	this.box = new Sprite(boxSource, x, y);
+	this.checker = new Sprite(checkerSource, x, y, 0, {opacity: 0});
+	this.onClick = onClick !== undefined ? onClick : function () {};
+	this.addChildren(this.box, this.checker);
+	this.hideBoxWhenChecked = hideBoxWhenChecked;
 
-		checked = checked !== undefined ? checked : false;
+	checked = checked !== undefined ? checked : false;
 
-		this.setChecked(checked, 0);
+	this.setChecked(checked, 0);
 
-		engine.loops.onRunning.attachFunction(this, this.checkMouse);
-	},
+	engine.loops.onRunning.attachFunction(this, this.checkMouse);
+};
 
+Checkbox.prototype = Object.create(View.Container.prototype);
+
+Checkbox.prototype.import({
 	setChecked: function (checked, animDuration) {
 		animDuration = animDuration !== undefined ? animDuration : 200;
 
@@ -28,7 +30,7 @@ new Class('Checkbox', [View.Container], {
 			this.checked = checked;
 		}
 		if (this.hideBoxWhenChecked) {
-			this.box.animate({opacity: (this.checked ? 0 : 1)}, {duration: animDuration})
+			this.box.animate({opacity: (this.checked ? 0 : 1)}, {duration: animDuration});
 		}
 		this.checker.animate({opacity: (this.checked ? 1 : 0)}, {duration: animDuration});
 	},

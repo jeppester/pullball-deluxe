@@ -1,26 +1,28 @@
-new Class('MenuButton', [View.Collidable], {
-	MenuButton: function (type) {
-		this.Collidable(type.bitmap || type.mask, undefined, undefined, 0, {mask: loader.getMask(type.mask || type.bitmap, this.getTheme())});
+MenuButton = function (type) {
+	View.Collidable.call(this, type.bitmap || type.mask, undefined, undefined, 0, {mask: loader.getMask(type.mask || type.bitmap, this.getTheme())});
 
-		this.animationDuration = 1;
-		if (type.vars) {
-			this.importProperties(type.vars, true);
-		}
-		this.onClick = type.onClick;
-		this.loop = type.loop || engine.currentRoom.loops.onRunning;
+	this.animationDuration = 1;
+	if (type.vars) {
+		this.importProperties(type.vars, true);
+	}
+	this.onClick = type.onClick;
+	this.loop = type.loop || engine.currentRoom.loops.onRunning;
 
-		if (this.onClick) {
-			this.clickBox = new Math.Rectangle(- this.offset.x, -this.offset.y, this.width, this.height);
-			this.enable();
-		}
+	if (this.onClick) {
+		this.clickBox = new Math.Rectangle(- this.offset.x, -this.offset.y, this.width, this.height);
+		this.enable();
+	}
 
-		this.instructions = type;
-		this.down = false;
-		this.startOffset = this.offset.y;
+	this.instructions = type;
+	this.down = false;
+	this.startOffset = this.offset.y;
 
-		this.onLoaded && this.onLoaded();
-	},
-	
+	this.onLoaded && this.onLoaded();
+};
+
+MenuButton.prototype = Object.create(View.Collidable.prototype);
+
+MenuButton.prototype.import({
 	checkClick: function () {
 		var box;
 

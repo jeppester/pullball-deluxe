@@ -1,37 +1,38 @@
-new Class('LevelCompletionScreen', [View.Container], {
-	LevelCompletionScreen: function (onNext) {
-		this.Container();
-		this.x = 400;
-		this.justCompleted = false;
-		this.oldPowerAwardLevel = 0;
-		this.oldTimeAwardLevel = 0;
-		this.oldFullyCompleted = false;
-		this.newTimeAwardLevel = 0;
-		this.newPowerAwardLevel = 0;
-		this.newFullyCompleted = false;
+LevelCompletionScreen = function (onNext) {
+	View.Container.call(this);
+	this.x = 400;
+	this.justCompleted = false;
+	this.oldPowerAwardLevel = 0;
+	this.oldTimeAwardLevel = 0;
+	this.oldFullyCompleted = false;
+	this.newTimeAwardLevel = 0;
+	this.newPowerAwardLevel = 0;
+	this.newFullyCompleted = false;
 
-		this.completionAward = false;
-		this.powerAward = false;
-		this.timeAward = false;
+	this.completionAward = false;
+	this.powerAward = false;
+	this.timeAward = false;
 
-		this.awardSpacing = 140;
+	this.awardSpacing = 140;
 
-		this.onNext = onNext;
+	this.onNext = onNext;
 
-		main.backButton.disable();
-		main.backButton.animate({opacity: 0.5}, {duration: 200});
-		main.restartButton.disable();
-		main.restartButton.animate({opacity: 0.5}, {duration: 200});
+	main.backButton.disable();
+	main.backButton.animate({opacity: 0.5}, {duration: 200});
+	main.restartButton.disable();
+	main.restartButton.animate({opacity: 0.5}, {duration: 200});
 
-		// Animate out any indicator
-		if (main.indicator && !main.indicator.inactive) {
-			main.indicator.inactive = true;
-			main.indicator.animate({radius: 0, opacity: 0}, {duration: 500, callback: function () {
-				engine.purge(this);
-			}});
-		}
-	},
+	// Animate out any indicator
+	if (main.indicator && !main.indicator.inactive) {
+		main.indicator.inactive = true;
+		main.indicator.animate({radius: 0, opacity: 0}, {duration: 500, callback: function () {
+			engine.purge(this);
+		}});
+	}
+};
+LevelCompletionScreen.prototype = Object.create(View.Container.prototype);
 
+LevelCompletionScreen.prototype.import({
 	checkSaveStats: function () {
 		// Save stats to local storage
 		var c, stats, time, newTimeAward, newPowerAward;

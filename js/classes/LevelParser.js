@@ -1,4 +1,4 @@
-new Class('LevelParser', {
+LevelParser = {
 	parseLevel: function (url) {
 		var type, level;
 
@@ -11,11 +11,11 @@ new Class('LevelParser', {
 
 			switch (type) {
 			case 'lvl':
-				level = LevelParser.prototype.parseLvl(data);
+				level = LevelParser.parseLvl(data);
 				level.file = url;
 				break;
 			case 'js':
-				level = LevelParser.prototype.parseJs(data);
+				level = LevelParser.parseJs(data);
 				level.file = url;
 				break;
 			}
@@ -118,11 +118,11 @@ new Class('LevelParser', {
 			case '28':
 				object.importProperties(objectTypes.HedgehogSwinging);
 				break;
-			// Uphill left grass 
+			// Uphill left grass
 			case 'obj_graes_skraa_v':
 				object.importProperties(objectTypes.GrassDownHill);
 				break;
-			// Uphill right grass 
+			// Uphill right grass
 			case 'obj_graes_skraa_h':
 				object.importProperties(objectTypes.GrassUpHill);
 				break;
@@ -221,9 +221,9 @@ new Class('LevelParser', {
 				level.cloudOpacity = 0.7;
 			}
 		}
-		
+
 		// throw new Error('Testing');
 
 		return level;
 	},
-});
+};

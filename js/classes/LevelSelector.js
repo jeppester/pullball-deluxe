@@ -1,57 +1,60 @@
-new Class('LevelSelector', [View.Container], {
-	LevelSelector: function (type, x, y) {
-		this.Container(
-			new View.Container(),
-			new View.Container()
-		);
+LevelSelector = function (type, x, y) {
+	View.Container.call(
+		this,
+		new View.Container(),
+		new View.Container()
+	);
 
-		main.levelSelector = this;
+	main.levelSelector = this;
 
-		// Set selected folder and level
-		this.currentFolder;
-		this.currentLevel;
-		this.folderSpacing = 122;
-		this.folders = [];
-		this.levels = [];
-		this.folderSelectorActive = false;
-		this.levelSelectorActive = false;
+	// Set selected folder and level
+	this.currentFolder;
+	this.currentLevel;
+	this.folderSpacing = 122;
+	this.folders = [];
+	this.levels = [];
+	this.folderSelectorActive = false;
+	this.levelSelectorActive = false;
 
-		// Create folders
-		this.createFolders();
-		this.selectFolder(main.storage.selectedFolder);
-		this.selectLevel(main.storage.selectedLevel);
+	// Create folders
+	this.createFolders();
+	this.selectFolder(main.storage.selectedFolder);
+	this.selectLevel(main.storage.selectedLevel);
 
-		// Create highlight
-		this.children[1].addChildren(
-			new View.Sprite('Menu.LevelHighlight', 311, 200, 0, {opacity: 1}),
-			new View.Sprite('Menu.LevelHighlight', 526, 200, 0, {opacity: 1}),
-			new MenuButton({
-				"bitmap": "Menu.Play",
-				"mask": "Menu.Play",
-				"vars": {
-					x: 710,
-					y: 200
-				},
-				"onClick": function () {
-					var levelSelector;
-					levelSelector = this.parent.parent;
+	// Create highlight
+	this.children[1].addChildren(
+		new View.Sprite('Menu.LevelHighlight', 311, 200, 0, {opacity: 1}),
+		new View.Sprite('Menu.LevelHighlight', 526, 200, 0, {opacity: 1}),
+		new MenuButton({
+			"bitmap": "Menu.Play",
+			"mask": "Menu.Play",
+			"vars": {
+				x: 710,
+				y: 200
+			},
+			"onClick": function () {
+				var levelSelector;
+				levelSelector = this.parent.parent;
 
-					main.levelController.openEntry(main.levelController.levelList[levelSelector.currentFolder].levels[levelSelector.currentLevel]);
-				}
-			})
-		);
-		this.children[1].addChildren(
-			new View.Sprite('UI.ArrowNext', 419, 200, 0, {opacity: 1})
-			//new View.Sprite('UI.ArrowNext', 634, 200, 0, {opacity: 1})
-		);
+				main.levelController.openEntry(main.levelController.levelList[levelSelector.currentFolder].levels[levelSelector.currentLevel]);
+			}
+		})
+	);
+	this.children[1].addChildren(
+		new View.Sprite('UI.ArrowNext', 419, 200, 0, {opacity: 1})
+		//new View.Sprite('UI.ArrowNext', 634, 200, 0, {opacity: 1})
+	);
 
-		engine.currentRoom.loops.onRunning.attachFunction(this, this.doFolderSelector);
-		engine.currentRoom.loops.onRunning.attachFunction(this, this.doLevelSelector);
-	},
-	
+	engine.currentRoom.loops.onRunning.attachFunction(this, this.doFolderSelector);
+	engine.currentRoom.loops.onRunning.attachFunction(this, this.doLevelSelector);
+};
+
+LevelSelector.prototype = Object.create(View.Container.prototype);
+
+LevelSelector.prototype.import({
 	createFolders: function () {
 		var i, folder;
-				
+
 		for (i = 0; i < main.levelController.levelList.length; i++) {
 			this.folders.push(new LevelSelectorIcon(main.levelController.levelList[i]));
 		}
@@ -69,7 +72,7 @@ new Class('LevelSelector', [View.Container], {
 
 	createLevels: function () {
 		var i, level;
-	
+
 		// Remove all current levels
 		for (i = 0; i < this.levels.length; i++) {
 			this.levels[i].remove();
@@ -102,7 +105,7 @@ new Class('LevelSelector', [View.Container], {
 			this.folderSelectorActive = true;
 			this.clicking = true;
 		}
-		
+
 		if (this.folderSelectorActive && (pointers = pointer.isDown(MOUSE_TOUCH_ANY))) {
 			x = pointers[0].x;
 			y = pointers[0].y;
@@ -146,7 +149,7 @@ new Class('LevelSelector', [View.Container], {
 			this.levelSelectorActive = true;
 			this.clicking = true;
 		}
-		
+
 		if (this.levelSelectorActive && (pointers = pointer.isDown(MOUSE_TOUCH_ANY))) {
 			x = pointers[0].x;
 			y = pointers[0].y;

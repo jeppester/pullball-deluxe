@@ -1,40 +1,42 @@
-new Class('Obstacle', [View.Collidable], {
-	Obstacle: function (type) {
-		if (!type.bitmap) {
-			this.hidden = true;
-		}
+Obstacle = function (type) {
+	if (!type.bitmap) {
+		this.hidden = true;
+	}
 
-		this.Collidable(type.bitmap || type.mask, undefined, undefined, 0, {mask: loader.getMask(type.mask, this.getTheme())});
+	View.Collidable.call(this, type.bitmap || type.mask, undefined, undefined, 0, {mask: loader.getMask(type.mask, this.getTheme())});
 
-		this.offset = type.offset ? type.offset : this.offset;
-		if (type.vars) {
-			this.importProperties(type.vars, true);
-		}
-		this.instructions = type;
+	this.offset = type.offset ? type.offset : this.offset;
+	if (type.vars) {
+		this.importProperties(type.vars, true);
+	}
+	this.instructions = type;
 
-		// do specific stuff for specific obstacles
-		switch (type.bitmap) {
-		case 'Objects.Grass':
-			this.borderLeftOffset = 0;
-			this.borderRightOffset = 0;
-			this.borders = {};
-			this.createBorders();
-			break;
-		case 'Objects.GrassUpHill':
-			this.borderLeftOffset = 0;
-			this.borderRightOffset = -64;
-			this.borders = {};
-			this.createBorders();
-			break;
-		case 'Objects.GrassDownHill':
-			this.borderLeftOffset = -64;
-			this.borderRightOffset = 0;
-			this.borders = {};
-			this.createBorders();
-			break;
-		}
-	},
+	// do specific stuff for specific obstacles
+	switch (type.bitmap) {
+	case 'Objects.Grass':
+		this.borderLeftOffset = 0;
+		this.borderRightOffset = 0;
+		this.borders = {};
+		this.createBorders();
+		break;
+	case 'Objects.GrassUpHill':
+		this.borderLeftOffset = 0;
+		this.borderRightOffset = -64;
+		this.borders = {};
+		this.createBorders();
+		break;
+	case 'Objects.GrassDownHill':
+		this.borderLeftOffset = -64;
+		this.borderRightOffset = 0;
+		this.borders = {};
+		this.createBorders();
+		break;
+	}
+};
 
+Obstacle.prototype = Object.create(View.Collidable.prototype);
+
+Obstacle.prototype.import({
 	createBorders: function () {
 		var i, children, child;
 

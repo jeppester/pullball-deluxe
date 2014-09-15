@@ -113,7 +113,7 @@ objectTypes = {
 		group: 'controllers',
 		depth: 1,
 		canControl: function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 		doControl: function (object) {
 			var peakTime, maxSpeed;
@@ -141,7 +141,7 @@ objectTypes = {
 		offsetLvlY: 8,
 		group: 'controllers',
 		canControl: function (object) {
-			return object.implements(Hedgehog);
+			return object instanceof Hedgehog
 		},
 		doControl: function (object) {
 			// Only turn if necessary
@@ -166,7 +166,7 @@ objectTypes = {
 					engine.currentRoom.loops.onRunning.attachFunction(this, this.doMovement);
 				}});
 			}
-			
+
 		}
 	},
 	Teleport: {
@@ -180,7 +180,7 @@ objectTypes = {
 		group: 'controllers',
 		depth: 0,
 		canControl: function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 		doControl: function (object) {
 			var i, dist, tele;
@@ -193,7 +193,7 @@ objectTypes = {
 			if (this.destination) {
 				// Find the distance from the ball to the teleport
 				dist = this.getDistanceTo(object);
-				
+
 				// Fade out the ball based on the distance
 				object.stopAnimations();
 				object.opacity = Math.max(0, (dist - 15) / 30);
@@ -210,7 +210,7 @@ objectTypes = {
 						}
 					}
 				}
-				
+
 				object.animate({opacity: 1}, {duration: 400});
 			}
 		}
@@ -227,7 +227,7 @@ objectTypes = {
 		group: 'controllers',
 		depth: 0,
 		canControl: function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 		doControl: function (object) {
 			if (object.power < object.powerMax && this.power > 0) {

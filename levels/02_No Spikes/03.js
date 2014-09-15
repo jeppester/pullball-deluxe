@@ -821,7 +821,7 @@
 			"group": "controllers",
 			"depth": 0,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			if (object.power < object.powerMax && this.power > 0) {
@@ -859,7 +859,7 @@
 			"group": "controllers",
 			"depth": 0,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			if (object.power < object.powerMax && this.power > 0) {
@@ -897,7 +897,7 @@
 			"group": "controllers",
 			"depth": 0,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			if (object.power < object.powerMax && this.power > 0) {
@@ -935,7 +935,7 @@
 			"group": "controllers",
 			"depth": 0,
 			"canControl": function (object) {
-			return object.implements(Ball);
+			return object instanceof Ball
 		},
 			"doControl": function (object) {
 			if (object.power < object.powerMax && this.power > 0) {
